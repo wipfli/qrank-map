@@ -4,7 +4,7 @@
   "sources": {
     "qrank": {
       "type": "vector",
-      "tiles": ["pmtiles://https://wipfli.github.io/qrank-map/qrank.pmtiles/{z}/{x}/{y}"]
+      "tiles": ["pmtiles://qrank.pmtiles/{z}/{x}/{y}"]
     }
   },
   "glyphs": "font/{fontstack}/{range}.pbf",
