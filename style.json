@@ -4,7 +4,8 @@
   "sources": {
     "qrank": {
       "type": "vector",
-      "tiles": ["pmtiles://qrank.pmtiles/{z}/{x}/{y}"]
+      "tiles": ["pmtiles://qrank.pmtiles/{z}/{x}/{y}"],
+      "maxzoom": 9
     }
   },
   "glyphs": "font/{fontstack}/{range}.pbf",
