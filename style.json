@@ -1,0 +1,83 @@
+{
+  "version": 8,
+  "name": "QRank Map",
+  "sources": {
+    "qrank": {
+      "type": "vector",
+      "url": "<to-be-defined>"
+    }
+  },
+  "glyphs": "font/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "background-color": "#f8f9fa"
+      }
+    },
+    {
+      "id": "boundary-admin-4",
+      "type": "line",
+      "source": "qrank",
+      "source-layer": "boundary-admin-4",
+      "paint": {
+        "line-color": "#3498db"
+      }
+    },
+    {
+      "id": "boundary-admin-2",
+      "type": "line",
+      "source": "qrank",
+      "source-layer": "boundary-admin-2",
+      "paint": {
+        "line-color": "#2980b9"
+      }
+    },
+    {
+      "id": "qrank",
+      "type": "symbol",
+      "source": "qrank",
+      "source-layer": "qrank",
+      "layout": {
+        "text-field": [
+          "format",
+          ["get", "name"],
+          {
+            "font-scale": 1.0
+          },
+          "\n",
+          {},
+          ["get", "@qrank"],
+          {
+            "font-scale": 0.8
+          }
+        ],
+        "text-font": [
+          "Open Sans Regular,Arial Unicode MS Regular"
+        ],
+        "visibility": "visible",
+        "symbol-sort-key": [
+          "-",
+          [
+            "to-number",
+            [
+              "get",
+              "@qrank"
+            ]
+          ]
+        ]
+      },
+      "paint": {
+        "text-color": "black",
+        "text-halo-blur": 0,
+        "text-halo-color": "white",
+        "text-halo-width": 2
+      }
+    }
+  ],
+  "id": "qrank-style"
+}
