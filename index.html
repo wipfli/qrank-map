@@ -26,7 +26,7 @@
 <body>
     <div id="map"></div>
     <script>
-        var protocol = new pmtiles.Protocol();
+        let protocol = new pmtiles.Protocol();
         maplibregl.addProtocol("pmtiles", protocol.tile);
         var map = new maplibregl.Map({
             container: 'map', // container id
