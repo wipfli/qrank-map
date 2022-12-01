@@ -7,6 +7,7 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="deps/maplibre-gl/2.1.9/maplibre-gl.js"></script>
     <link href="deps/maplibre-gl/2.1.9/maplibre-gl.css" rel="stylesheet" />
+    <script src="deps/pmtiles/2.5.0/index.js"></script>
     <style>
         body {
             margin: 0;
@@ -25,6 +26,8 @@
 <body>
     <div id="map"></div>
     <script>
+        let protocol = new pmtiles.Protocol();
+        maplibregl.addProtocol("pmtiles", protocol.tile);
         var map = new maplibregl.Map({
             container: 'map', // container id
             style: 'style.json', // style URL
